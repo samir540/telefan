@@ -1,0 +1,712 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #100023;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.sign-up,
+.sign-in,
+.forgotten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 85px auto;
+}
+.sign-up input,
+.sign-in input,
+.forgotten input {
+  border: none;
+  background: #362649;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 75px;
+  color: #8e8787;
+  padding-bottom: 7px;
+}
+.sign-up div > button,
+.sign-in div > button,
+.forgotten div > button {
+  color: #f5f5f5;
+}
+.sign-up label,
+.sign-in label,
+.forgotten label {
+  font-size: 29px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  width: 75%;
+  position: relative;
+}
+.sign-up label .eye-slash,
+.sign-up label .eye,
+.sign-in label .eye-slash,
+.sign-in label .eye,
+.forgotten label .eye-slash,
+.forgotten label .eye {
+  position: absolute;
+  right: 6%;
+  top: 48px;
+  width: 31px;
+  height: 30px;
+}
+.sign-up label .eye-slash img,
+.sign-up label .eye img,
+.sign-in label .eye-slash img,
+.sign-in label .eye img,
+.forgotten label .eye-slash img,
+.forgotten label .eye img {
+  width: 100%;
+}
+.sign-up label .eye,
+.sign-in label .eye,
+.forgotten label .eye {
+  visibility: hidden;
+}
+.sign-up__terms,
+.sign-in__terms,
+.forgotten__terms {
+  font-size: 24px;
+}
+.sign-up h5,
+.sign-in h5,
+.forgotten h5 {
+  margin: 5px auto;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0px auto 38px;
+}
+.sign-up__submit,
+.sign-in__submit,
+.forgotten__submit {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.sign-up__submit button,
+.sign-in__submit button,
+.forgotten__submit button {
+  outline: none;
+  border: none;
+  background: #362649;
+  color: #f5f5f5;
+  padding: 0 0 7px 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  margin-top: 45px;
+  font-size: 29px;
+}
+
+.sign-up button {
+  color: #867c91 !important;
+}
+
+.sign-in__forgotten-password {
+  width: 75%;
+}
+.sign-in__go-register {
+  color: #f5f5f5 !important;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+
+.login-modal,
+.sign-up-modal {
+  display: none;
+  position: sticky;
+  z-index: 50;
+  width: 100%;
+  height: 112vh;
+  background: #000;
+  opacity: 0.92;
+  top: 0;
+}
+.login-modal__content,
+.sign-up-modal__content {
+  width: 100%;
+}
+.login-modal__content .ok,
+.login-modal__content .wrong-password,
+.sign-up-modal__content .ok,
+.sign-up-modal__content .wrong-password {
+  background: #fff;
+  border-radius: 8px;
+  width: 50%;
+}
+.login-modal__content .ok p,
+.login-modal__content .wrong-password p,
+.sign-up-modal__content .ok p,
+.sign-up-modal__content .wrong-password p {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.login-modal__content .wrong-password,
+.sign-up-modal__content .wrong-password {
+  height: 104px;
+  margin-bottom: 20px;
+}
+.login-modal__content .ok,
+.sign-up-modal__content .ok {
+  height: 65px;
+  cursor: pointer;
+}
+
+.login .forgotten-password a {
+  color: white;
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.login .forgotten-password h6 {
+  font-weight: 500;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.login .forgotten-password label {
+  width: 40%;
+}
+.login .forgotten-password .mobile .mobile-input select {
+  height: 41px;
+  margin: 10px 29px 0 0;
+  border-radius: 6px;
+  background: #362649;
+  color: #f5f5f5;
+  border: none;
+}
+.login .forgotten-password .mobile .mobile-input input {
+  width: 79%;
+  color: #f5f5f5;
+}
+.login .forgotten-password .forgotten-btn {
+  margin-top: 30px;
+}
+
+.home__head-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  background: #362649;
+  height: 330px;
+  border-radius: 6px;
+}
+.home__head-info h5 {
+  text-align: center;
+  font-size: 27px;
+  margin: 50px 0 60px 0;
+}
+.home__head-info .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.home__head-info .icons .video-icon span {
+  width: 175px;
+}
+.home__head-info .icons > div {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.home__head-info .icons > div img {
+  width: 100%;
+  height: auto;
+}
+.home__head-info .icons > div span {
+  color: #f5f5f5;
+  font-size: 23px;
+}
+.home__celebrity h5 {
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+.home__celebrity .choose {
+  text-align: center;
+}
+.home__celebrity .celebrities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px 57px;
+}
+.home__celebrity .celebrities__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  border: 2px solid #362649;
+  height: auto;
+}
+.home__celebrity .celebrities__card .image img {
+  width: 100%;
+  height: auto;
+}
+.home__celebrity .celebrities__card .personal-info {
+  background-color: #17032e;
+  padding: 15px 0 0 7px;
+  line-height: 13px;
+  height: 100%;
+  border-radius: 0 0 6px 6px;
+}
+.home__celebrity .celebrities__card .personal-info .name {
+  font-size: 21px;
+}
+.home__celebrity .celebrities__card .personal-info .activity {
+  color: #706b76;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h5,
+p,
+label,
+h4,
+h3,
+h6 {
+  color: #f5f5f5;
+}
+
+h5 {
+  margin-bottom: 30px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  color: #f5f5f5;
+  background-color: #362649;
+  font-size: 24px;
+  padding: 10px 23px;
+}
+
+section {
+  background-color: #100023;
+  padding: 70px 0 60px;
+}
+
+.border-solid {
+  border: 2px solid white;
+}
+
+input:not([type=checkbox]) {
+  border: none;
+  background: #362649;
+  outline: none;
+  border-radius: 6px;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.header {
+  background-color: #100023;
+  height: 115px;
+}
+.header__logo img {
+  width: 165px;
+  height: 105px;
+  cursor: pointer;
+}
+.header__language {
+  cursor: pointer;
+  width: 25px;
+  margin-top: 37px;
+}
+.header__language .ru {
+  position: absolute;
+}
+.header__language:hover .ru {
+  display: block;
+}
+.header__language a {
+  color: #f5f5f5;
+}
+.header__language a:hover {
+  font-weight: 700;
+}
+.header__language .ru {
+  display: none;
+  transition: display 2s;
+}
+
+.user-view-header .right {
+  width: 30%;
+}
+.user-view-header .header__language {
+  margin: 0;
+}
+.user-view-header .application-as-celebrity button {
+  font-size: 15px;
+  padding: 8px 17px;
+}
+
+.owner-view-header .inbox {
+  display: flex;
+  cursor: pointer;
+}
+.owner-view-header .inbox p {
+  margin-bottom: 0rem;
+}
+.owner-view-header .inbox-msg-number {
+  color: white;
+  background: red;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  padding: 0px 0 0 6px;
+}
+
+.footer {
+  background-color: #100023;
+  height: 110px;
+}
+.footer__info {
+  padding-top: 14px;
+}
+.footer__info p {
+  font-size: 18px;
+}
+.footer__info__soc-icons {
+  width: 15%;
+}
+.footer__info__soc-icons a img {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.profile {
+  position: relative;
+}
+.profile__photo--big {
+  border-radius: 34px 34px 0 0;
+  border: 1px solid #362649;
+  width: 100%;
+  height: 300px;
+  background: #362649;
+  position: relative;
+}
+.profile__photo--big img {
+  width: 100%;
+}
+.profile__photo--small {
+  position: relative;
+  z-index: 10;
+  left: 42%;
+  bottom: 72px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #f5f5f5;
+}
+.profile__photo--small img {
+  width: 100%;
+  height: auto;
+}
+.profile__photo--small .img-small {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.profile__bio {
+  margin-top: -42px;
+}
+.profile__bio .position {
+  color: #888888;
+  font-size: 35px;
+}
+.profile__bio .text {
+  font-size: 27px;
+}
+.profile__gift-choice {
+  margin-top: 60px;
+}
+.profile__gift-choice .video-call {
+  background-color: #362649;
+  margin: 45px 0 55px;
+  border-radius: 15px;
+  height: 200px;
+  padding: 0 21px;
+}
+.profile__gift-choice .video-call__icon {
+  border: 3px solid #fff;
+  border-radius: 20px;
+  width: 135px;
+  height: 110px;
+  margin-right: 15px;
+}
+.profile__gift-choice .video-call__description p:nth-child(1) {
+  font-weight: 500;
+  font-size: 25px;
+}
+.profile__gift-choice .video-call__description p:last-child {
+  font-size: 16px;
+}
+.profile__gift-choice .video-call__price {
+  font-weight: 500;
+  font-size: 25px;
+}
+.profile__gift-choice .video-gift {
+  border-radius: 15px;
+  background-color: #362649;
+  background-color: #362649;
+  margin: 45px 0 55px;
+  border-radius: 15px;
+  height: 200px;
+  padding: 0 21px;
+}
+.profile__gift-choice .video-gift__icon .btn-hollow {
+  border: 3px solid #fff;
+  border-radius: 20px;
+  width: 135px;
+  height: 110px;
+  margin-right: 15px;
+}
+.profile__gift-choice .video-gift__icon .bow {
+  padding-left: 23px;
+}
+.profile__gift-choice .video-gift__icon .bow span:nth-child(1) {
+  margin-right: -11px;
+}
+.profile__gift-choice .video-gift__description {
+  margin-top: 37px;
+}
+.profile__gift-choice .video-gift__description p:nth-child(1) {
+  font-weight: 500;
+  font-size: 25px;
+}
+.profile__gift-choice .video-gift__description p:last-child {
+  font-size: 16px;
+}
+.profile__gift-choice .video-gift__price {
+  font-weight: 500;
+  font-size: 25px;
+}
+.profile__videos {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 55px 60px;
+}
+.profile__videos .video-block img {
+  width: 100%;
+  border-radius: 20px;
+}
+.profile__change {
+  margin-top: 30px;
+}
+.profile__userIcon {
+  background: #4a3b5c;
+}
+.profile__userIcon .userIcon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-top: 0px;
+  background-size: cover;
+  background-position: center;
+}
+.profile__add--photo {
+  background: rgba(74, 59, 92, 0.5);
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(74, 59, 92, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  z-index: 15;
+  cursor: pointer;
+}
+.profile__add--photo .plusIcon {
+  width: 30%;
+  height: 30%;
+}
+.profile__add--video button {
+  border: 1px solid #f5f5f5;
+}
+.profile__personal-information .information-header {
+  border-bottom: 1px solid #362649;
+  width: 100%;
+}
+.profile__personal-information .information-header .headers p {
+  font-size: 25px;
+  cursor: pointer;
+}
+.profile__personal-information .information-header .bar {
+  height: 5px;
+  width: 70px;
+  background: white;
+  position: relative;
+  top: 3px;
+  left: 21%;
+}
+.profile__personal-information .information-body {
+  width: 100%;
+  margin-top: 55px;
+}
+.profile__personal-information .general-info {
+  width: 45%;
+}
+.profile__personal-information .general-info .form-switch {
+  margin-left: -40px;
+}
+.profile__personal-information .general-info .form-switch span {
+  color: #f5f5f5;
+  font-size: 23px;
+  padding-right: 66px;
+}
+.profile__personal-information .general-info .form-check-input:checked {
+  background-color: #4a3b5c;
+  border-color: #4a3b5c;
+}
+.profile__personal-information .general-info .payment-info__description {
+  margin: 0 0 25px;
+}
+.profile__personal-information .general-info .payment-info__description .minute,
+.profile__personal-information .general-info .payment-info__description .payment {
+  height: 43px;
+  background: #201231;
+  border-radius: 6px;
+}
+.profile__personal-information .general-info .payment-info__description .minute {
+  width: 65%;
+  margin-right: 41px;
+}
+.profile__personal-information .general-info .payment-info__description .payment {
+  width: 30%;
+}
+.profile__video-reset-modal, .profile__photo-reset-modal {
+  position: sticky;
+  z-index: 50;
+  width: 100%;
+  height: 112vh;
+  background: #000;
+  opacity: 0.92;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.profile__video-reset-modal .content, .profile__photo-reset-modal .content {
+  width: 100%;
+}
+.profile__video-reset-modal .content .update,
+.profile__video-reset-modal .content .cancel, .profile__photo-reset-modal .content .update,
+.profile__photo-reset-modal .content .cancel {
+  background: #fff;
+  border-radius: 8px;
+  width: 50%;
+}
+.profile__video-reset-modal .content .update p,
+.profile__video-reset-modal .content .cancel p, .profile__photo-reset-modal .content .update p,
+.profile__photo-reset-modal .content .cancel p {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.profile__video-reset-modal .content .update, .profile__photo-reset-modal .content .update {
+  height: 180px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.profile__video-reset-modal .content .update hr, .profile__photo-reset-modal .content .update hr {
+  width: 100%;
+}
+.profile__video-reset-modal .content .cancel, .profile__photo-reset-modal .content .cancel {
+  height: 65px;
+  cursor: pointer;
+}
+
+.profile__choose--btn {
+  width: 70px;
+  height: 42px;
+  margin: 0 auto;
+}
+.profile__choose--btn button {
+  background-color: #362649;
+  border-radius: 3px;
+}
+
+.video-call-selection h5 {
+  margin: 25px auto;
+  font-size: 26px;
+}
+.video-call-selection .selection-block {
+  width: 240px;
+  height: 130px;
+  background: #362649;
+  border-radius: 8px;
+}
+.video-call-selection .selection-block p:nth-child(1) {
+  font-size: 25px;
+}
+.video-call-selection .selection-block p:last-child {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.call-form__inputs .inputs input:not([type=checkbox]) {
+  width: 90%;
+}
+.call-form__btn {
+  margin-top: 75px;
+}
+.result__circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 5px solid #362649;
+  background-color: #362649;
+}
+.result__circle img {
+  position: relative;
+  top: 62px;
+  left: 66px;
+  width: 55px;
+  height: 55px;
+}
+.result__content > div {
+  margin-bottom: 40px;
+}
