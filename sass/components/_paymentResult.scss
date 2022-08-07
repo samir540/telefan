@@ -1,0 +1,31 @@
+@import "./utilities.scss";
+.result {
+  margin-top: 75px;
+  margin-bottom: 115px;
+  &__circle {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 5px solid #362649;
+    background-color: #362649;
+    & img {
+      position: absolute;
+      top: 51px;
+      left: 53px;
+      width: 91px;
+      height: 73px;
+    }
+  }
+  &__text {
+    p {
+      font-size: 20px;
+    }
+  }
+  &__btn {
+  }
+}
+
+.result__content > div {
+  margin-bottom: 40px;
+}

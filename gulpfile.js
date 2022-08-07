@@ -43,6 +43,7 @@ async function includeHTML() {
       "!header-login.html", // ignore
       "!header-ownerView.html", // ignore
       "!header-userView.html", // ignore
+      "!header-update-video", // ignore
       "!footer.html", // ignore
     ])
     .pipe(

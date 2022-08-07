@@ -1,0 +1,82 @@
+@import "./utilities.scss";
+
+.home {
+  &__head-info {
+    @include flex-col;
+    margin-bottom: 70px;
+    background: #362649;
+    height: 330px;
+    border-radius: 6px;
+    h5 {
+      text-align: center;
+      font-size: 27px;
+      margin: 50px 0 60px 0;
+    }
+
+    .icons {
+      @include flex-row;
+      justify-content: space-around;
+      .video-icon {
+        span {
+          width: 175px;
+        }
+      }
+      & > div {
+        @include flex-col;
+        width: 120px;
+        height: 120px;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        span {
+          color: $white;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  &__celebrity {
+    h5 {
+      font-size: 28px;
+      margin-bottom: 45px;
+    }
+    .choose {
+      text-align: center;
+    }
+    .celebrities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 60px 57px;
+
+      &__card {
+        @include flex-col;
+        border-radius: 6px;
+        border: 2px solid #362649;
+
+        height: auto;
+        .image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .personal-info {
+          background-color: #17032e;
+          padding: 15px 0 0 7px;
+          line-height: 13px;
+          height: 100%;
+          border-radius: 0 0 6px 6px;
+          .name {
+            font-size: 21px;
+          }
+          .activity {
+            color: #706b76;
+          }
+        }
+      }
+    }
+  }
+}

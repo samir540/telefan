@@ -1,0 +1,21 @@
+@import "./utilities.scss";
+
+.video-call-selection {
+  h5 {
+    margin: 25px auto;
+    font-size: 26px;
+  }
+  .selection-block {
+    width: 240px;
+    height: 130px;
+    background: $blockBackground;
+    border-radius: 8px;
+    p:nth-child(1) {
+      font-size: 25px;
+    }
+    p:last-child {
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+}

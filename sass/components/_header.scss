@@ -1,0 +1,80 @@
+@import "./utilities.scss";
+
+.header {
+  background-color: #100023;
+  height: 115px;
+
+  &__logo {
+    img {
+      width: 165px;
+      height: 105px;
+      cursor: pointer;
+    }
+  }
+  &__language {
+    cursor: pointer;
+    width: 25px;
+    margin-top: 37px;
+    .ru {
+      position: absolute;
+    }
+    &:hover .ru {
+      display: block;
+    }
+    a {
+      color: $white;
+    }
+    a:hover {
+      font-weight: 700;
+    }
+    .ru {
+      display: none;
+      transition: display 2s;
+    }
+  }
+}
+.user-view-header {
+  .right {
+    width: 30%;
+  }
+  .header__language {
+    margin: 0;
+  }
+  .application-as-celebrity {
+    button {
+      font-size: 15px;
+      padding: 8px 17px;
+    }
+  }
+}
+.owner-view-header {
+  .inbox {
+    display: flex;
+    cursor: pointer;
+    p {
+      margin-bottom: 0rem;
+    }
+    &-msg {
+      &-number {
+        color: white;
+        background: red;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        padding: 0px 0 0 6px;
+      }
+    }
+  }
+}
+.header-update-video {
+  .right {
+    .save {
+      button {
+        background-color: blue !important;
+      }
+    }
+    .cancel{
+      margin-right: 85px;
+    }
+  }
+}

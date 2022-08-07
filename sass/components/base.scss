@@ -1,0 +1,62 @@
+@import "./utilities.scss";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #100023;
+}
+a {
+  text-decoration: none;
+}
+h5,
+p,
+label,
+h4,
+h3,
+h6 {
+  color: $white;
+}
+h5 {
+  margin-bottom: 30px;
+}
+button {
+  border: none;
+  border-radius: 6px;
+  color: $white;
+  background-color: $inputBackgroung;
+  font-size: 22px;
+  padding: 8px 23px;
+}
+section {
+  background-color: $background;
+}
+.border-solid {
+  border: 2px solid white;
+}
+input:not([type="checkbox"]) {
+  border: none;
+  background: $inputBackgroung;
+  outline: none;
+  border-radius: 6px;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+label {
+  margin-bottom: 20px;
+  font-size: 23px;
+}

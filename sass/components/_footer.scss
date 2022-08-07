@@ -1,0 +1,20 @@
+.footer {
+  background-color: #100023;
+  height: 110px;
+  &__info {
+    padding-top: 14px;
+    p {
+      font-size: 18px;
+    }
+    &__soc-icons {
+      width: 15%;
+      a {
+        img {
+          width: 19px;
+          height: 19px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

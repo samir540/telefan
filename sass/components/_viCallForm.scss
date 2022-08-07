@@ -1,0 +1,22 @@
+@import "./utilities.scss";
+
+.call-form {
+  &__inputs {
+    .inputs {
+      input:not([type="checkbox"]) {
+        width: 90%;
+      }
+      .note {
+        &__header {
+        }
+        &__description {
+        }
+      }
+    }
+  }
+  &__btn {
+    margin-top: 75px;
+    &--next {
+    }
+  }
+}
