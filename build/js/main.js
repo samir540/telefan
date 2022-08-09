@@ -52,55 +52,50 @@ $(document).ready(function () {
     }
   });
 
-  // Activate video call and gift
-  var videoGiftCheckBox = document.querySelector("#video-gift-checkbox");
-  var videoCallCheckBox = document.querySelector("#video-call-checkbox");
+  /***************** Activate video call and gift */
+  $("#video-gift-checkbox").click(function () {
+    if (this.checked) {
+      $(".video-gift-input ").each(function () {
+        $(".payment-gift").prop("disabled", false);
+        $(this).css("color", "rgba(255, 255, 255, 1)");
+        $(this).css("background", "#362649");
+      });
+    } else {
+      $(".video-gift-input").prop("disabled", true);
+      $(".video-gift-input").css("color", "rgba(255, 255, 255, 0.2)");
+      $(".video-gift-input").css("background", "#201231");
+    }
+  });
+  $("#video-call-checkbox").click(function () {
+    if (this.checked) {
+      $(".video-call-input").each(function () {
+        $(".payment-call").prop("disabled", false);
+        $(this).css("color", "rgba(255, 255, 255, 1)");
+        $(this).css("background", "#362649");
+      });
+      $("span.flatpickr-day").css("color", "rgba(255, 255, 255, 1)");
+      //Modal time open
+      $("span.flatpickr-day").click(function () {
+        $("#modal-time-picker").css("display", "flex");
+      });
+    } else {
+      $(".video-call-input").prop("disabled", true);
+      $(".video-call-input").css("color", "rgba(255, 255, 255, 0.2)");
+      $(".video-call-input").css("background", "#201231");
+      $(".flatpickr-day").css("color", "rgba(255, 255, 255, 0.2)");
+    }
+  });
+  //Modal time close
+  $("#cancel-modal-time-picker").click(function () {
+    $("#modal-time-picker").hide();
+  });
+  //Update selected time
+  $("#update-selected-time").click(function () {
+    $("#modal-time-picker").css("display", "flex");
+    $("#add-time-btn").text("Sil");
+  });
 
-  var videoGiftInputsParent = document.querySelector("#video-gift-inputs");
-  var allGiftInputs =
-    videoGiftInputsParent && videoGiftInputsParent.querySelectorAll("input");
-
-  var videoCallInputsParent = document.querySelector("#video-call-inputs");
-  var allCallInputs =
-    videoCallInputsParent && videoCallInputsParent.querySelectorAll("input");
-
-  if (videoGiftCheckBox) {
-    videoGiftCheckBox.addEventListener("click", function (e) {
-      if (e.target.checked) {
-        for (var i = 0; i < allGiftInputs.length; i++) {
-          allGiftInputs[i].disabled = false;
-          allGiftInputs[i].style.color = "rgba(255, 255, 255, 1)";
-          allGiftInputs[i].style.background = "#362649";
-        }
-      } else {
-        for (var i = 0; i < allGiftInputs.length; i++) {
-          allGiftInputs[i].disabled = true;
-          allGiftInputs[i].style.color = "rgba(255, 255, 255, 0.2)";
-          allGiftInputs[i].style.background = "#201231";
-        }
-      }
-    });
-  }
-
-  if (videoCallCheckBox) {
-    videoCallCheckBox.addEventListener("click", function (e) {
-      if (e.target.checked) {
-        for (var i = 0; i < allCallInputs.length; i++) {
-          allCallInputs[i].disabled = false;
-          allCallInputs[i].style.color = "rgba(255, 255, 255, 1)";
-          allCallInputs[i].style.background = "#362649";
-        }
-      } else {
-        for (let i = 0; i < allCallInputs.length; i++) {
-          allCallInputs[i].disabled = true;
-          allCallInputs[i].style.color = "rgba(255, 255, 255, 0.2)";
-          allCallInputs[i].style.background = "#201231";
-        }
-      }
-    });
-  }
-
-  // Video block
+  /**********Video block border bold*/
   $("#block-video-call-choice").click(function () {
     $("#block-video-call-choice").css("border", "3px solid white");
     $("#block-video-gift-choice").css("border", "none");
@@ -109,7 +104,30 @@ $(document).ready(function () {
     $("#block-video-call-choice").css("border", "none");
     $("#block-video-gift-choice").css("border", "3px solid white");
   });
+  //************Date and time picker *************/
+  var configDate = {
+    enableTime: false,
+    dateFormat: "Y-m-d",
+    inline: true,
+  };
+  var configTime = {
+    enableTime: true,
+    dateFormat: "H:i",
+    inline: true,
+    noCalendar: true,
+  };
+
+  $("#add-date").flatpickr(configDate);
+  $("#add-time").flatpickr(configTime);
+
+  // Modal time picker
+  // $("#add-date").change(function () {
+  //   $("#modal-time-picker").css("display", "flex");
+  // });
+
+  // $("#cancel-modal-time-picker").click(function () {
+  //   $("#modal-time-picker").hide();
+  //   $(document).ready();
+  // });
+ 
 });
-
-
-

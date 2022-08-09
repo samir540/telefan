@@ -128,6 +128,8 @@
   opacity: 0.92;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 125%;
 }
 
@@ -139,6 +141,8 @@
   opacity: 0.92;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 140%;
 }
 
@@ -465,8 +469,8 @@ label {
   position: absolute;
   left: 42%;
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   top: 10%;
 }
 .profile__view-byUser .photo img {
@@ -758,6 +762,99 @@ label {
 .profile__personal-information .general-info .payment-info__description .payment {
   width: 30%;
 }
+.profile__personal-information .general-info .date-time-picker-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 145%;
+}
+.profile__personal-information .general-info .date-time-picker-box .selected-time-show {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile__personal-information .general-info .date-time-picker-box .selected-time-show .selected-time {
+  color: #fff;
+  background: #362649;
+  border-radius: 6px;
+  height: 47px;
+  margin-bottom: 25px;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.profile__personal-information .general-info .date-time-picker .date {
+  visibility: hidden;
+}
+.profile__personal-information .general-info .date-time-picker .flatpickr-calendar {
+  background-color: #201231;
+}
+.profile__personal-information .general-info .date-time-picker .flatpickr-calendar .flatpickr-day:hover {
+  background-color: #584a68;
+}
+.profile__personal-information .general-info .date-time-picker .flatpickr-calendar .flatpickr-day.selected {
+  background-color: #b095d1;
+}
+.profile__personal-information .general-info .date-time-picker .flatpickr-calendar .flatpickr-day:focus {
+  background-color: #35214d;
+}
+.profile__personal-information .general-info .modal-time-picker {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  background: #000;
+  opacity: 0.92;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.profile__personal-information .general-info .modal-time-picker__content {
+  width: 500px;
+  height: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+}
+.profile__personal-information .general-info .modal-time-picker__content .time-picker__header {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile__personal-information .general-info .modal-time-picker__content .time-picker__header .time {
+  visibility: hidden;
+}
+.profile__personal-information .general-info .modal-time-picker__content .time-picker__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.profile__personal-information .general-info .modal-time-picker__content .time-picker__footer button {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+.profile__personal-information .general-info .modal-time-picker__content hr {
+  border-top: 1px solid;
+  opacity: 0.3;
+  height: 2px;
+  background: black;
+  width: 100%;
+}
+.profile__personal-information .general-info .modal-time-picker .flatpickr-time {
+  outline: none;
+  border-radius: 6px;
+}
 .profile__video-reset-modal, .profile__photo-reset-modal {
   position: fixed;
   z-index: 50;
@@ -766,6 +863,8 @@ label {
   opacity: 0.92;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   display: none;
   justify-content: center;
   align-items: center;

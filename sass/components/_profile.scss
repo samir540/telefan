@@ -42,8 +42,8 @@
       position: absolute;
       left: 42%;
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       top: 10%;
       img {
         width: 100%;
@@ -224,7 +224,7 @@
     grid-gap: 55px 60px;
     .video-block {
       border-radius: 15px;
-   
+
       video {
         width: 100%;
         height: auto;
@@ -338,6 +338,86 @@
           .payment {
             width: 30%;
           }
+        }
+      }
+      .date-time-picker-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 145%;
+        .selected-time-show {
+          margin-top: 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .selected-time {
+            color: #fff;
+            background: #362649;
+            border-radius: 6px;
+            height: 47px;
+            margin-bottom: 25px;
+            text-align: center;
+            padding-top: 3px;
+            font-size: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+      .date-time-picker {
+        .date {
+          visibility: hidden;
+        }
+        .flatpickr-calendar {
+          background-color: #201231;
+          .flatpickr-day {
+            &:hover {
+              background-color: #584a68;
+            }
+            &.selected {
+              background-color: #b095d1;
+            }
+            &:focus {
+              background-color: #35214d;
+            }
+          }
+        }
+      }
+      .modal-time-picker {
+        @include modal;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        &__content {
+          @include modal-content;
+          .time-picker__header {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .time {
+              visibility: hidden;
+            }
+          }
+          .time-picker__footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 15px;
+            button {
+              background: white;
+              color: black;
+              font-weight: 600;
+            }
+          }
+          hr {
+            @include hr-modal;
+          }
+        }
+
+        .flatpickr-time {
+          outline: none;
+          border-radius: 6px;
         }
       }
     }

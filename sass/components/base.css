@@ -1,5 +1,3 @@
-@import "./utilities.scss";
-
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -12,6 +10,7 @@ html {
 *::before {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,46 +18,52 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #100023;
 }
+
 a {
   text-decoration: none;
 }
+
 h5,
 p,
 label,
 h4,
 h3,
 h6 {
-  color: $white;
+  color: #f5f5f5;
 }
+
 h5 {
   margin-bottom: 30px;
 }
+
 button {
   border: none;
   border-radius: 6px;
-  color: $white;
-  background-color: $inputBackgroung;
+  color: #f5f5f5;
+  background-color: #362649;
   font-size: 22px;
   padding: 8px 23px;
 }
+
 section {
-  background-color: $background;
+  background-color: #100023;
 }
+
 .border-solid {
   border: 2px solid white;
 }
-input:not([type="checkbox"]) {
+
+input:not([type=checkbox]) {
   border: none;
-  background: $inputBackgroung;
+  background: #362649;
   outline: none;
   border-radius: 6px;
   height: 40px;
   padding-left: 10px;
   margin-top: 10px;
 }
+
 label {
   margin-bottom: 20px;
   font-size: 23px;
-}
-
-
+}/*# sourceMappingURL=base.css.map */
