@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="header user-view-header owner-view-header ">
+    <header class="header user-view-header ">
         <div class="d-flex flex-row justify-content-between container ">
             <div class="header__logo">
                 <img src="./images/logoTelefan.svg" />
@@ -23,11 +23,8 @@
                     <a href="#" class="az first" id="az">AZ</a>
                     <a href="#" class="ru second" id="ru">RU</a>
                 </div>
-                <div class="inbox">
-                    <p class="inbox-msg">Gələnlər qutusu</p><span class="inbox-msg-number">1</span>
-                </div>
                 <div class="application-as-celebrity">
-                    <button>Profile</button>
+                    <button>Məşhur olaraq müraciət et</button>
                 </div>
             </div>
 
@@ -35,28 +32,37 @@
     </header>
 
 
+
     <section>
-
-
-        <div class="profile profile__changement container">
-            <div class="profile__video profile__add--video d-flex justify-content-center align-items-center ">
-                <!-- <img src="./images/profilePhotoBig.jpg" /> -->
-                <!-- <button id="update-video-btn">Video təqdimat əlavə et</button> -->
-
+        <div class="profile profile__view-byUser profile-video-call-options container ">
+            <div class="video">
+                <video controls>
+                    <source src="./images/testVideo.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="profile__photo d-flex justify-content-center profile__userIcon ">
-                <img class="userIcon" src="./images/userIcon.png" />
+            <div class="photo d-flex justify-content-center">
+                <img class="img-small" src="./images/profilePhotoSmall.jpg" />
             </div>
-          
-
-            <div class="profile__personal-information d-flex flex-column align-items-center">
-                <h5 class="name">Damla Memmedova</h5>
-                <p class="position">Mugenni</p>
-                <button class="profile-change-btn"><a href="./profile-add-info-byOwner.html">Profilə düzəliş et</a></button>
+            <div class="profile__bio bio d-flex flex-column align-items-center">
+                <h4 class="name">Damla Memmedova</h4>
+                <p class="position">Müğənni</p>
+                <p class="text">Salam dostlar. Mən də artıq bu platformadayam.</p>
+            </div>
+            <div class="profile__video-call-price">
+                <h5>Video zəng müddətini seç</h5>
+                <div class="video-call-price-options " >
+                    <div class="option-5 video-call-price active-border"  >
+                        <span class="option-5__min">5 deq</span>
+                        <span class="option-5__price">250 AZN</span>
+                    </div>
+                    <div class="option-10 video-call-price " >
+                        <span class="option-10__min">10 deq</span>
+                        <span class="option-10__price">500 AZN</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class=" container d-flex flex-row justify-content-md-evenly footer__info ">
             <p>E-mail: destek@telefan.az </p>
@@ -72,9 +78,11 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 
 </html>

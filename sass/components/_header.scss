@@ -12,6 +12,9 @@
     }
   }
   &__language {
+    .first{
+      font-weight: 600;
+    }
     cursor: pointer;
     width: 25px;
     margin-top: 37px;

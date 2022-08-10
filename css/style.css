@@ -375,6 +375,9 @@ label {
   width: 25px;
   margin-top: 37px;
 }
+.header__language .first {
+  font-weight: 600;
+}
 .header__language .ru {
   position: absolute;
 }
@@ -471,7 +474,7 @@ label {
   border-radius: 50%;
   width: 220px;
   height: 220px;
-  top: 10%;
+  top: 15%;
 }
 .profile__view-byUser .photo img {
   width: 100%;
@@ -583,6 +586,125 @@ label {
 }
 .profile__bio .name {
   font-size: 37px;
+}
+.profile__choose--btn {
+  width: 110px;
+  height: 42px;
+  margin: 0 auto;
+}
+.profile-video-call-options {
+  margin-bottom: 250px;
+}
+.profile__video-call-price {
+  margin-top: 40px;
+}
+.profile__video-call-price h5 {
+  font-size: 25px;
+  text-align: center;
+}
+.profile__video-call-price .video-call-price-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 52%;
+  align-items: center;
+  margin: 0 auto;
+}
+.profile__video-call-price .video-call-price-options .video-call-price.active-border {
+  border: 3px solid white;
+}
+.profile__video-call-price .video-call-price-options .option-5,
+.profile__video-call-price .video-call-price-options .option-10 {
+  width: 190px;
+  height: 97px;
+  display: flex;
+  flex-direction: column;
+  background: #342644;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.profile__video-call-price .video-call-price-options .option-5__min, .profile__video-call-price .video-call-price-options .option-5__price,
+.profile__video-call-price .video-call-price-options .option-10__min,
+.profile__video-call-price .video-call-price-options .option-10__price {
+  color: #fff;
+  font-size: 20px;
+}
+.profile__video-call-price .video-call-price-options .option-5__price,
+.profile__video-call-price .video-call-price-options .option-10__price {
+  font-weight: 600;
+}
+.profile-video-call-date h5 {
+  text-align: center;
+  font-size: 23px;
+  margin-top: 45px;
+  margin-bottom: 0px !important;
+}
+.profile-video-call-date .date-time-picker-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 138px;
+}
+.profile-video-call-date .date-time-picker-box .selected-time-show {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+.profile-video-call-date .date-time-picker-box .selected-time-show .selected-time {
+  color: #fff;
+  background: #362649;
+  border-radius: 6px;
+  height: 47px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  text-align: center;
+  padding: 7px 5px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker {
+  width: 35%;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .date {
+  visibility: hidden;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-weekday {
+  color: #fff;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar {
+  background-color: #201231;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-months span svg {
+  fill: #fff;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-months .flatpickr-month select {
+  color: #fff;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-months .flatpickr-month select option {
+  background-color: #4a3b5c;
+  font-size: 13px;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-months .flatpickr-month .numInputWrapper input {
+  color: #fff;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-day:hover {
+  background-color: #584a68;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-day.selected {
+  background-color: #b095d1;
+}
+.profile-video-call-date .date-time-picker-box .date-time-picker .flatpickr-calendar .flatpickr-day:focus {
+  background-color: #35214d;
+}
+.profile-video-call-date .video-call-choose-btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 .profile__gift-choice {
   margin-top: 60px;
@@ -913,14 +1035,8 @@ label {
   cursor: pointer;
 }
 
-.profile__choose--btn {
-  width: 70px;
-  height: 42px;
-  margin: 0 auto;
-}
-.profile__choose--btn button {
-  background-color: #362649;
-  border-radius: 3px;
+.avtive-border {
+  border: 3px solid white !important;
 }
 
 .video-call-selection h5 {

@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  // language choice
+  $(".second").click(function () {
+    var langSecond = $(".second").text();
+    var langFirst = $(".first").text();
+
+    $(".first").text(langSecond);
+    $(".second").text(langFirst);
+  });
+
   //login modal
   $("#submit").click(function () {
     $("#modal").show();
@@ -95,7 +104,7 @@ $(document).ready(function () {
     $("#add-time-btn").text("Sil");
   });
 
-  /**********Video block border bold*/
+  /**********Video block border bold and user choice  */
   $("#block-video-call-choice").click(function () {
     $("#block-video-call-choice").css("border", "3px solid white");
     $("#block-video-gift-choice").css("border", "none");
@@ -129,5 +138,24 @@ $(document).ready(function () {
   //   $("#modal-time-picker").hide();
   //   $(document).ready();
   // });
- 
+
+  /**************Video call price option with 5 min and 10 min */
+  var option10 = $(".option-10");
+  var option5 = $(".option-5");
+  $(option10).click(function () {
+    if (option10.hasClass("active-border")) {
+      option10.removeClass("active-border");
+    } else {
+      option10.addClass("active-border");
+      option5.removeClass("active-border");
+    }
+  });
+  $(option5).click(function () {
+    if (option5.hasClass("active-border")) {
+      option5.removeClass("active-border");
+    } else {
+      option5.addClass("active-border");
+      option10.removeClass("active-border");
+    }
+  });
 });
