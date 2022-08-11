@@ -12,28 +12,36 @@
     }
   }
   &__language {
-    .first{
+    display: flex;
+    flex-direction: column;
+    height: 56px;
+    margin-top: 39px!important;
+    .first {
       font-weight: 600;
     }
     cursor: pointer;
     width: 25px;
-    margin-top: 37px;
-    .ru {
-      position: absolute;
+
+    .ru,
+    .en, .az {
+      color:#fff;
     }
     &:hover .ru {
-      display: block;
+      display: inline;
     }
-    a {
-      color: $white;
+    &:hover .en {
+      display: inline;
     }
+   
     a:hover {
-      font-weight: 700;
+      font-weight: 600;
     }
-    .ru {
+    .ru,
+    .en {
       display: none;
-      transition: display 2s;
+      transition: all 0.7s;
     }
+  
   }
 }
 .user-view-header {
@@ -76,7 +84,7 @@
         background-color: blue !important;
       }
     }
-    .cancel{
+    .cancel {
       margin-right: 85px;
     }
   }

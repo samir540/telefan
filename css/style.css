@@ -371,28 +371,33 @@ label {
   cursor: pointer;
 }
 .header__language {
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  margin-top: 39px !important;
   cursor: pointer;
   width: 25px;
-  margin-top: 37px;
 }
 .header__language .first {
   font-weight: 600;
 }
-.header__language .ru {
-  position: absolute;
+.header__language .ru,
+.header__language .en, .header__language .az {
+  color: #fff;
 }
 .header__language:hover .ru {
-  display: block;
+  display: inline;
 }
-.header__language a {
-  color: #f5f5f5;
+.header__language:hover .en {
+  display: inline;
 }
 .header__language a:hover {
-  font-weight: 700;
+  font-weight: 600;
 }
-.header__language .ru {
+.header__language .ru,
+.header__language .en {
   display: none;
-  transition: display 2s;
+  transition: all 0.7s;
 }
 
 .user-view-header .right {

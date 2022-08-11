@@ -3,10 +3,21 @@ $(document).ready(function () {
   $(".second").click(function () {
     var langSecond = $(".second").text();
     var langFirst = $(".first").text();
+    var langThird = $(".third").text();
 
     $(".first").text(langSecond);
     $(".second").text(langFirst);
+    $(".third").text(langThird);
   });
+   $(".third").click(function () {
+     var langSecond = $(".second").text();
+     var langFirst = $(".first").text();
+     var langThird = $(".third").text();
+
+     $(".first").text(langThird);
+     $(".second").text(langFirst);
+     $(".third").text(langSecond);
+   });
 
   //login modal
   $("#submit").click(function () {
