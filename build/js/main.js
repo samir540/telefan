@@ -9,15 +9,15 @@ $(document).ready(function () {
     $(".second").text(langFirst);
     $(".third").text(langThird);
   });
-   $(".third").click(function () {
-     var langSecond = $(".second").text();
-     var langFirst = $(".first").text();
-     var langThird = $(".third").text();
+  $(".third").click(function () {
+    var langSecond = $(".second").text();
+    var langFirst = $(".first").text();
+    var langThird = $(".third").text();
 
-     $(".first").text(langThird);
-     $(".second").text(langFirst);
-     $(".third").text(langSecond);
-   });
+    $(".first").text(langThird);
+    $(".second").text(langFirst);
+    $(".third").text(langSecond);
+  });
 
   //login modal
   $("#submit").click(function () {
@@ -154,19 +154,31 @@ $(document).ready(function () {
   var option10 = $(".option-10");
   var option5 = $(".option-5");
   $(option10).click(function () {
-    if (option10.hasClass("active-border")) {
-      option10.removeClass("active-border");
-    } else {
+    if (!option10.hasClass("active-border")) {
       option10.addClass("active-border");
       option5.removeClass("active-border");
     }
   });
   $(option5).click(function () {
-    if (option5.hasClass("active-border")) {
-      option5.removeClass("active-border");
-    } else {
+    if (!option5.hasClass("active-border")) {
       option5.addClass("active-border");
       option10.removeClass("active-border");
+    }
+  });
+
+  /**************Inbox messages border */
+  var giftMsg = $("#inbox-gift-msg");
+  var callMsg = $("#inbox-call-msg");
+  $(callMsg).click(function () {
+    if (!callMsg.hasClass("active-border")) {
+      callMsg.addClass("active-border");
+      giftMsg.removeClass("active-border");
+    }
+  });
+  $(giftMsg).click(function () {
+    if (!giftMsg.hasClass("active-border")) {
+      giftMsg.addClass("active-border");
+      callMsg.removeClass("active-border");
     }
   });
 });
